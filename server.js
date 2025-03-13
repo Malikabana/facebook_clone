@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const mysql = require('mysql2/promise');
 const bcrypt = require('bcrypt');
@@ -23,7 +22,7 @@ const pool = mysql.createPool({
 });
 
 // Secret Key for JWT
-const JWT_SECRET = 'your_secret_key'; // Replace with a strong, secure key in production
+const JWT_SECRET = 'your_secret_key'; 
 
 const authenticateToken = (req, res, next) => {
   const authHeader = req.headers['authorization'];
